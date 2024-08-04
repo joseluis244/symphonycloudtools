@@ -1,3 +1,3 @@
-module github.com/joseluis244/syr2uploader
+module joseluis244/symphonycloudtools
 
 go 1.21.0
