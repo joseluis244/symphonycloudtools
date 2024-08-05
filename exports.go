@@ -1,27 +1,17 @@
 package symphonycloudtools
 
 import (
-	"fmt"
-	"net"
+	"joseluis244/symphonycloudtools/r2"
 )
 
-func Init() {
-	fmt.Println("Init syr2uploader")
-}
+var R2 *r2.R2
+var dev bool = true
 
-func HashGenerator() {
-	// Obtener todas las interfaces de red
-	interfaces, err := net.Interfaces()
+func Init(license string) {
+	_, r2key, _, err := decryptLicense(license, "MedicareSoft203$")
 	if err != nil {
-		fmt.Println("Error:", err)
-		return
+		panic(err)
 	}
-
-	// Iterar sobre cada interfaz y obtener su dirección MAC
-	for _, iface := range interfaces {
-		mac := iface.HardwareAddr.String()
-		if mac != "" {
-			fmt.Printf("Interfaz: %s, MAC: %s\n", iface.Name, mac)
-		}
-	}
+	r2key["Dev"] = dev
+	R2 = r2.Init(r2key)
 }

@@ -1,0 +1,14 @@
+{   
+    "Firebase":{
+        "key": "AAAA"
+    },
+    "R2":{
+        "BucketName": "medicaresoftdicomstorage",
+        "AccountId": "d819815835fcab8b93773d68a24d2722",
+        "AccessKeyId": "e062c1231797e2cb38a75442fb3d25df",
+        "AccessSecret": "50d7c24974f219165f920140d1d3ed0e7ee4a82b69f57484bfc27f54619c3fbf",
+        "PublicUrl": "https://pub-d0fcedc6472e46eb9eea69adbec2ea6f.r2.dev",
+        "ClientID": "MedicareSoftSRL",
+        "SymphonyUuid": "666-555-444-333"
+    }
+}
